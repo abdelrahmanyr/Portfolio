@@ -1,0 +1,474 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --primary-color: #027ad0;
+    --secondary-color: #0365ac;
+    --background-color: #000e16;
+    --sec-background-color: #05253530;
+    --text-color: #ffffff;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--sec-background-color);
+
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Ubuntu', sans-serif;
+    background-color: var(--background-color);
+    color: var(--text-color);
+}
+
+a {
+    all: unset;
+}
+
+ul li {
+    list-style: none;
+}
+
+/* == Button Styling*/
+button {
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    transition: .3s;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+
+/* --- Header Section --- */
+header.header {
+    padding: 25px 5%;
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    background-image: url('../assets/background.jpg');
+    background-position: top;
+    background-size: cover;
+    background-attachment: fixed;
+
+}
+
+/* header {
+    position: fixed;
+} */
+
+.header .logo { /* Logo */
+    font-size: 1.5rem;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.navbar ul {    /* Navbar */
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    gap: 25px;
+}
+
+.navbar ul li{    /* Links */
+    cursor: pointer;
+    border-bottom: 1px solid transparent;
+}
+
+nav.navbar ul li:hover{    /* Links activation */
+    color: var(--primary-color);
+    border-bottom: 1px solid var(--primary-color);
+}
+
+nav.navbar ul li{    /* Links activation */
+    transition: 0.3s;
+}
+
+/* --- Home Section --- */
+main.home {
+    background-image: url('../assets/background.jpg');
+    background-position: center;
+    background-size: cover;
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 10%;
+    display: flex;
+    gap: 7rem;
+    align-items: center;
+    line-height: 1.3;
+}
+
+.home h1 span, h2 span {
+    color: var(--primary-color);
+}
+
+@keyframes move {   /* Image Animation */
+    0% {transform: translate(40px, 0);}
+    50% {transform: translate(-20px, 0);}
+    100% {transform: translate(0, 0);}
+}
+
+@keyframes move_rev {   /* H1 Animation */
+    0% {transform: translate(-20px, 0);}
+    50% {transform: translate(40px, 0);}
+    100% {transform: translate(0, 0);}
+}
+
+@keyframes rotate_btn {  /* Button Animation */
+    0% {
+        transform: rotate(5deg);
+    }
+    50% {
+        transform: rotate(-5deg);
+    }
+    100% {
+        transform: rotate(5deg);
+    }
+}
+
+.home h1{
+    animation-name: move_rev;
+    animation-duration: 1.5s;
+    animation-delay: 200ms;
+}
+
+.home p {
+    font-size: 1.2rem;
+    margin-top: 2rem;
+    margin-bottom: 3rem;
+}
+
+.image img {
+    border-radius: 50%;
+    box-shadow: 5px 1px 10px var(--secondary-color);
+    animation-name: move;
+    animation-duration: 1.5s;
+    animation-delay: 200ms;
+    animation-play-state: running;
+    transition: .3s;
+}
+
+.image img:hover {
+    border-radius: 40%;
+    box-shadow: 5px 1px 10px var(--text-color);
+}
+
+
+.contact_btn button{
+    margin-left: 2em;
+    font-size: 1.05rem;
+
+    animation-name: rotate_btn;
+    animation-duration: 2s;
+    animation-iteration-count: infinite;
+}
+
+/* --- About Section --- */
+.about {
+    width: 100%;
+    min-height: 100vh;
+    padding: 0 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+.title {
+    color: var(--primary-color);
+    font-size: 3rem;
+
+}
+
+.parent {
+    display: flex;
+    gap: 7rem;
+    line-height: 1.3;
+    align-items: center;
+    font-size: 1.1rem;
+}
+
+.image_a img {
+    border-radius: 50%;
+    box-shadow: -5px 1px 10px var(--secondary-color);
+    transition: .3s;
+}
+
+.image_a img:hover {
+    border-radius: 40%;
+    box-shadow: -5px 1px 10px var(--text-color);
+}
+
+/* == Social Media Icons == */
+.links {
+    align-self: center;
+    display: flex;
+    gap: 2rem;
+}
+
+.links a > *{
+    transition: .3s;
+    justify-content: center;
+    cursor: pointer;
+    font-size: 2.5rem;
+    border-radius: 3px;
+
+}
+
+#face:hover {
+    color: #3b5998;
+    transform: translate(0, -5px);
+    box-shadow: 0 0 15px #3b5998;
+    text-shadow: 0 0 15px #3b5998;
+
+}
+
+#gthb:hover {
+    text-shadow: 0 0 3px #fff;
+    transform: translate(0, -5px);
+    box-shadow: 0 0 15px #fff;
+
+}
+
+#lnkdn:hover {
+    color: #0077B5;
+    transform: translate(0, -5px);
+    box-shadow: 0 0 15px #0077B5;
+}
+
+
+/* --- Projects Section --- */
+.projects {
+    min-height: 100vh;
+    padding: 1% 10%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-around;
+    background-color: var(--sec-background-color);
+}
+
+.cards {
+    display: flex;
+    gap: 10em;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    height: 120%;
+}
+
+.card {
+    background-color: var(--background-color);
+    padding: 2em 1em;
+    border-radius: 30px;
+    box-shadow: 0 0 10px #575757;
+    transition: .3s;
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    justify-content: center;
+    align-items: center;
+    width: 20vw;
+    height: auto;
+}
+
+.card p {
+    padding: 5%;
+}
+
+.card img {
+    border-radius: 20px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    height: auto;
+    width: 100%;
+}
+
+.card:hover {
+    transform: scale(1.01);
+    box-shadow: 0 0 15px var(--primary-color);
+}
+
+.plinks {
+    display: flex;
+    gap: 1em;
+}
+
+.plinks a button {
+    display: flex;
+    justify-content: center;
+    gap: 0.5em;
+    align-items: center;
+    font-size: 0.8rem;
+}
+
+/* --- Contact Section --- */
+
+.contact {
+    text-align: center;
+    min-height: 50vh;
+    padding: 6%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-content: center;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    max-width: 50em;
+    margin: 1rem auto;
+
+}
+
+.send_btn input {
+    border: none;
+    outline: none;
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: var(--primary-color);
+    color: var(--text-color);
+    border-radius: 30px;
+    transition: .3s;
+    cursor: pointer;
+    outline: none;
+    border: none;
+    width: 70%;
+}
+
+.send_btn input:hover{
+    background-color: var(--secondary-color);
+    transform: scale(1.05);
+}
+
+.input_box {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5em;
+    border-radius: 100px;
+    align-items: center;
+}
+
+.input_box input, textarea {
+    padding: 10px 20px;
+    border-radius: 100px;
+    border: none;
+    outline: none;
+    width: 200%;
+
+}
+
+/* --- Footer Section --- */
+footer {
+    background-image: url('../assets/background.jpg');
+    color: var(--text-color);
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    padding: 3% 0 1%;
+    gap: 1.2rem;
+}
+
+footer .links a i{
+    font-size: 2rem;
+}
+
+
+/* --- Adjusting site for smaller screens */
+@media screen and (max-width: 768px) {
+    * {
+        font-size: 90%;
+    }
+
+    p {
+        font-size: 60%;
+        font-weight: 100;
+    }
+
+    button {
+        font: 1em;        
+    }
+
+    .title {
+        font-size: 2.3rem;
+    }
+
+    .parent, .home, .cards {
+        flex-direction: column;
+        padding: 10% 0;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+
+    .image, .image_a {
+        margin-left: 25vw;
+    }
+
+    .content {
+        font-size: 200%;
+        order: 1;
+    }
+    img {
+        width: 50%;
+    }
+
+    .navbar {
+        visibility:hidden
+    }
+
+    header img {
+        width: 6rem;
+    }
+
+    .card {
+        width: 60vw;
+        padding: 30px;
+    }
+
+    .cards > *{
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+
+    .plinks {
+        gap: 0.5em;
+        justify-content: center;
+    }
+
+    .plinks a button {
+        font-size: 0.7rem;
+        width: 70%;
+
+    }
+
+}
