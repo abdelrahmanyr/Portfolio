@@ -389,6 +389,8 @@ form {
 /* --- Footer Section --- */
 footer {
     background-image: url('../assets/background.jpg');
+    background-position: bottom;
+    background-size: cover;
     color: var(--text-color);
     text-align: center;
     display: flex;
@@ -399,7 +401,7 @@ footer {
 }
 
 footer .links a i{
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
 
